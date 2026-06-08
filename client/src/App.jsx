@@ -9,7 +9,7 @@ import Editor from './pages/Editor'
 import WebsiteEditor from './pages/Editor'
 import Site from './pages/Site'
 import Pricing from './pages/Pricing'
-export const serverUrl = "http://localhost:8080"
+export const serverUrl = "https://web-craft-zeta-ecru.vercel.app"
 
 
 const App = () => {
