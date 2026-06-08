@@ -18,7 +18,7 @@ app.post("/api/stripe/webhook",express.raw({type:"application/json"}),stripeWebH
 app.use(express.json());
 app.use(cookieParser())
 app.use(cors({
-    origin:"http://localhost:5173",
+    origin:"https://web-craft-v92m.vercel.app",
     credentials:true
 }))
 
