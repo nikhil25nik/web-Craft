@@ -27,7 +27,16 @@ app.use("/api/user",userRouter);
 app.use("/api/website",websiteRouter);
 app.use("/api/payment",paymentRouter);
 
-app.listen(PORTS,()=>{
-    console.log("app listening on port 8080");
-    connectDB();
-})
+const startServer = async () => {
+  try {
+    await connectDB();
+
+    app.listen(PORTS, () => {
+      console.log(`Server running on port ${PORTS}`);
+    });
+  } catch (err) {
+    console.log("Server startup error:", err);
+  }
+};
+
+startServer();
