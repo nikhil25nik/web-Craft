@@ -14,7 +14,7 @@ export const serverUrl = "https://web-craft-zeta-ecru.vercel.app"
 
 const App = () => {
   useGetCurrentUser()
-  const {userData} = useSelector(state=>state.user);
+  const userData = useSelector(state=>state.user.userData);
   return (
     <BrowserRouter>
     <Routes>
